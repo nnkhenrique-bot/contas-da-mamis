@@ -1,1 +1,45 @@
-teste
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Contas da MAMIS</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>💖 Contas da Mamis</h1>
+  <p>Organização financeira familiar</p>
+</header>
+
+<div id="dashboard"></div>
+
+<input id="nome" placeholder="Nome da conta">
+<input id="valor" placeholder="Valor">
+<input id="data" type="date">
+
+<button id="btnSalvar"
+onclick="adicionarConta()">
+Adicionar
+</button>
+<button onclick="exportarBackup()">
+  ⬇️ Exportar Backup
+</button>
+
+<input
+  type="file"
+  id="arquivoBackup"
+  style="display:none"
+  onchange="importarBackup(event)"
+>
+
+<button onclick="document.getElementById('arquivoBackup').click()">
+  ⬆️ Importar Backup
+</button>
+<div id="lista"></div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
